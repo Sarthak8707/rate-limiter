@@ -1,4 +1,16 @@
+
 const map = new Map();
+
+const refreshCount = () => {
+
+    // refresh after 60 seconds
+    for(const key of map){
+        map.set(key, 0);
+    }
+
+}
+
+setInterval(refreshCount, 60000);
 
 export const rateLimiter = (req, res, next) => {
     const id = req.user.id;
