@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 
 
-app.use(rateLimiter)
+app.use(rateLimiter);
 
 
 app.listen(3000, () => {
